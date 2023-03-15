@@ -1,0 +1,137 @@
+---
+title: "Habits"
+author: "John Doe"
+format: 
+  revealjs:
+    incremental: false
+    theme: simple
+    footer: "Ultracool Chemistry"
+    logo: RSG.png
+    css: logo.css
+---
+
+# In the morning
+
+## Getting up
+
+::: {.incremental}
+- Turn off alarm ^[Another footnote]
+- Get out of bed
+:::
+
+::: aside
+Some additional commentary of more peripheral interest.
+:::
+
+## Breakfast
+
+:::: {.columns}
+
+::: {.column width="40%"}
+- Eat eggs
+- Drink coffee
+:::
+
+::: {.column width="60%"}
+1. You know, some stuff...
+
+::: {.panel-tabset}
+
+### Tab A
+
+```{.python code-line-numbers="|6|8"}
+import numpy as np
+import matplotlib.pyplot as plt
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
+### Tab B
+
+```{python}
+
+import numpy as np
+import matplotlib.pyplot as plt
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(subplot_kw={"projection": "polar"})
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
+:::
+
+::: {.fragment}
+
+2. More stuff
+:::
+
+:::
+
+::::
+
+::: {.notes}
+Speaker notes go here.
+:::
+
+## Slide with a pause
+
+content before the pause
+
+. . .
+
+content after the pause
+
+# In the evening
+
+## Dinner
+
+- Eat spaghetti
+- Drink wine
+```{r}
+#| label: fig-airquality
+#| fig-cap: Temperature and ozone level.
+#| warning: false
+
+library(leaflet)
+labels <- sprintf(
+  "<strong>%s</strong><br/>%g people / mi<sup>2</sup>",
+  states$name, states$density
+) %>% lapply(htmltools::HTML)
+
+m <- m %>% addPolygons(
+  fillColor = ~pal(density),
+  weight = 2,
+  opacity = 1,
+  color = "white",
+  dashArray = "3",
+  fillOpacity = 0.7,
+  highlightOptions = highlightOptions(
+    weight = 5,
+    color = "#666",
+    dashArray = "",
+    fillOpacity = 0.7,
+    bringToFront = TRUE),
+  label = labels,
+  labelOptions = labelOptions(
+    style = list("font-weight" = "normal", padding = "3px 8px"),
+    textsize = "15px",
+    direction = "auto"))
+m
+```
+## Going to sleep
+
+- Get in bed
+- Count sheep
+
+
+```{=html}
+<iframe width="1600" height="800" src="https://docs.baskerville.ac.uk/system/#quota" title="Baskerville docs"></iframe>
+```
