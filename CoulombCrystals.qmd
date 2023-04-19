@@ -103,7 +103,22 @@ Then ionised species self-organise into a "Coulomb Crystal" ^[Shhh, it's not rea
 :::
 ::::
 
-## But this only works for one species
+## Laser Cooling {auto-animate=true, .smaller}
+:::: {.columns}
+
+::: {.column width="50%"}
+- Tune the laser to a longer wavelength - lower energy
+- Only the atoms moving fastest towards the laser can absorb.
+- Energy lost from the system from the hottest atoms
+- System as whole then cools down
+
+:::
+::: {.column width="50%"}
+![Absorption and Emission](AbsorbtionAndEmission.png){fig-alt="Absorption and Emission"}
+:::
+::::
+
+### But this only works for one species
 
 - Sympathetic cooling
   - Use Ca<sup>+</sup> to cool species that you aren't able to laser cool by collisions.
