@@ -475,12 +475,22 @@ James Allsopp and Tim Softley
 </section>
 <section id="impure-crystals" class="slide level2 smaller">
 <h2>Impure crystals</h2>
-
-<img data-src="ImpureCrystals.jpg" class="margin-caption r-stretch quarto-figure-right"><p class="caption">Impure crystals</p><p>Reaction between OCS<sup>-</sup> and ND<sub>3</sub> producing OCS and ND<sub>3</sub><sup>+</sup></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Reaction between OCS<sup>-</sup> and ND<sub>3</sub> producing OCS and ND<sub>3</sub><sup>+</sup></p>
 <ul>
 <li>OCS<sup>-</sup> more massive than Ca<sup>+</sup></li>
 <li>ND<sub>3</sub><sup>+</sup> less massive than Ca<sup>+</sup></li>
 </ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center margin-caption">
+<figure>
+<p><img data-src="ImpureCrystals.jpg" class="margin-caption" alt="Impure crystals"></p>
+<p></p><figcaption>Impure crystals</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="reactions-in-progress" class="slide level2 smaller" data-auto-animate="true,">
 <h2 data-id="quarto-animate-title">Reactions in progress</h2>
@@ -539,21 +549,19 @@ James Allsopp and Tim Softley
 </div>
 </div>
 </div>
-</section>
-<section id="plan-of-work" class="slide level2 smaller">
-<h2>Plan of work</h2>
-<p>Predict the numbers of Ca<sup>+</sup> ions initially, then infer the numbers of lighter or heavier species.</p>
-<p>Start with pure Ca<sup>+</sup> crystals.</p>
-<ul>
-<li>Improve the simulation code
-<ul>
-<li>Currently takes 3 mins for ~50 ions, but scales as (N<sub>ions</sub>)<sup>2</sup></li>
-<li>Image augmentation (still need to simulate ~700000 images)</li>
-</ul></li>
-<li>Run a Convolutional Neural Network on the simulated data set.</li>
-<li>Try and use a GAN transform simulated images to be more like experimental images - small numbers of experimental images</li>
-<li>Use PyTorch to try and learn the number of ions from the transformed images.</li>
-</ul>
+<!--## Plan of work {.smaller}
+
+Predict the numbers of Ca<sup>+</sup> ions initially, then infer the numbers of lighter or heavier species.
+
+Start with pure Ca<sup>+</sup> crystals.
+
+- Improve the simulation code
+  - Currently takes 3 mins for ~50 ions, but scales as (N<sub>ions</sub>)<sup>2
+  - Image augmentation (still need to simulate ~700000 images)
+- Run a Convolutional Neural Network on the simulated data set.
+- Try and use a GAN transform simulated images to be more like experimental images - small numbers of experimental images
+- Use PyTorch to try and learn the number of ions from the transformed images.
+-->
 </section>
 <section id="currently" class="slide level2 smaller">
 <h2>Currently</h2>
@@ -619,6 +627,19 @@ Internet disappoints me
 </div>
 </div>
 </div>
+</section>
+<section id="applications-to-your-work" class="slide level2">
+<h2>Applications to your work</h2>
+<ul>
+<li>You all have access to BlueBEAR
+<ul>
+<li>Currently over 14 top of the range GPUs for you to use</li>
+<li>More being added</li>
+</ul></li>
+<li>BEAR offers Nvidia-certified Deep learning training</li>
+<li>We offer drop in sessions, or free coding and coaching sessions</li>
+</ul>
+<p>All you need is data……</p>
 <!--
 ## Non-deep learning
 
@@ -633,8 +654,8 @@ Internet disappoints me
   - Navigation - GPS speed of light 1ft per nanosecond.
 
 -->
-<p><img src="RSG.png" class="slide-logo"></p>
-<div class="footer footer-default">
+
+<img src="RSG.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p>Ultracool Chemistry</p>
 </div>
 </section></section>
