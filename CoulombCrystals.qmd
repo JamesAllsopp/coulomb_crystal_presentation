@@ -5,7 +5,7 @@ format:
   revealjs:
     incremental: false
     theme: moon
-    footer: "Ultracool Chemistry"
+    footer: "Ultracool Chemistry                  "
     logo: RSG.png
     css: logo.css
     fig-cap-location: margin
@@ -123,15 +123,62 @@ Then ionised species self-organise into a "Coulomb Crystal" ^[Shhh, it's not rea
 - Sympathetic cooling
   - Use Ca<sup>+</sup> to cool species that you aren't able to laser cool by collisions.
 
+## Impure crystals {.smaller}
 
-## Reactions in progress {.smaller}
+:::: {.columns}
+
+::: {.column width="50%"}
+
+Reaction in Ca<sup>+</sup> crystal
+
+OCS<sup>-</sup> + ND<sub>3</sub> &#8594; OCS + ND<sub>3</sub><sup>+</sup>
+
++ OCS<sup>-</sup> more massive than Ca<sup>+</sup>
++ ND<sub>3</sub><sup>+</sup> less massive than Ca<sup>+</sup>
+:::
+::: {.column width="50%"}
+
+![Impure crystals](ImpureCrystals.jpg){fig-alt="Impure crystals" width=500}
+:::
+::::
+
+## Reactions in progress {auto-animate=true, .smaller}
 :::: {.columns}
 ::: {.column width="50%"}
 
  Ca<sup>+</sup> (trapped) + CH<sub>3</sub>F &#8594;  CaF<sup>+</sup> +  CH<sub>3</sub>
 
-- CH<sub>3</sub> is uncharged and leaves the trap.
 - CaF<sup>+</sup> doesn't fluoresce at this wavelength
+
+:::
+::: {.column width="50%"}
+![](TimeProgression.png){width=650}
+:::
+::::
+
+## Reactions in progress {auto-animate=true, .smaller}
+:::: {.columns}
+::: {.column width="50%"}
+
+ Ca<sup>+</sup> (trapped) + CH<sub>3</sub>F &#8594;  CaF<sup>+</sup> +  CH<sub>3</sub>
+
+- CaF<sup>+</sup> doesn't fluoresce at this wavelength
+- CH<sub>3</sub> is uncharged and leaves the trap.
+
+:::
+::: {.column width="50%"}
+![](TimeProgression.png){width=650}
+:::
+::::
+
+## Reactions in progress {auto-animate=true, .smaller}
+:::: {.columns}
+::: {.column width="50%"}
+
+ Ca<sup>+</sup> (trapped) + CH<sub>3</sub>F &#8594;  CaF<sup>+</sup> +  CH<sub>3</sub>
+
+- CaF<sup>+</sup> doesn't fluoresce at this wavelength
+- CH<sub>3</sub> is uncharged and leaves the trap.
 - Fewer Ca<sup>+</sup> ions as time progresses, allows measurement of reaction rate
 - Lighter Ca<sup>+</sup> ions sink to the centre of the crystal changing its observed shape
 :::
@@ -139,6 +186,9 @@ Then ionised species self-organise into a "Coulomb Crystal" ^[Shhh, it's not rea
 ![](TimeProgression.png){width=650}
 :::
 ::::
+
+
+
 
 ## Great - Where do we come in
 :::: {.columns}
@@ -150,10 +200,8 @@ Experimenters compare the microscope image to simulated images to work out the n
 :::
 
 ::: {.column width="60%"}
-::: {.fragment}
 
 ![](MatchingImages.png){fig-alt="Experiment and Simulation"}
-:::
 
 ::: {.fragment}
 
@@ -163,7 +211,7 @@ Resource intensive so.....  Machine Learning!
 :::
 ::::
 
-## Plan of work {.smaller}
+<!--## Plan of work {.smaller}
 
 Predict the numbers of Ca<sup>+</sup> ions initially, then infer the numbers of lighter or heavier species.
 
@@ -175,7 +223,7 @@ Start with pure Ca<sup>+</sup> crystals.
 - Run a Convolutional Neural Network on the simulated data set.
 - Try and use a GAN transform simulated images to be more like experimental images - small numbers of experimental images
 - Use PyTorch to try and learn the number of ions from the transformed images.
-
+-->
 ## Currently  {.smaller}
 
 Using BlueBear to simulate crystals
@@ -192,8 +240,11 @@ Can't just load dataset into memory
 - Using WebDataSet in PyTorch to package these images into shards of 500 images with labels: tar files
 - Allows shuffling, pre-loading and caching of images
 
-## Deep Learning
+## Machine Learning
 
+![Neural Network](neural_networks-001.png){fig-alt="Neural Network" width=550}
+
+## Deep Learning {auto-animate=true}
 ::: {layout-ncol=2}
 ![](Schematic-diagram-of-the-proposed-edge-detectors-using-simple-CNN-setting.jpg){fig-alt="CNN" width=450}
 
@@ -223,6 +274,17 @@ Internet disappoints me
 ![Experimental image (n=150)](29_01_19_213_modA_cropped.png){fig-alt="Experiment image of 150 ions" height=400}
 :::
 ::::
+
+## Application to your work
+
++ You all have access to BlueBEAR
+  + Currently over 14 top of the range GPUs for you to use
+  + More being added
++ BEAR offers Nvidia-certified Deep learning training
++ We offer drop in sessions, or free coding and coaching sessions
+
+All you need is data......
+
 <!--
 ## Non-deep learning
 
