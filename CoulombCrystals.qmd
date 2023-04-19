@@ -1,7 +1,7 @@
 ---
 title: "Coulomb Crystals: Chemistry at very low temperatures"
 author: "James Allsopp and Tim Softley"
-format: 
+format:
   revealjs:
     incremental: false
     theme: moon
@@ -9,24 +9,122 @@ format:
     logo: RSG.png
     css: logo.css
     fig-cap-location: margin
+    transition: fade
+    transition-speed: fast
 ---
-## Why
-::: {.incremental}
-- Want to study chemical reactions in the quantum regime
-  - Theory since 1905 predicts no temperature dependence
-  - Need few, very cold atoms confined in a small space.
-  - Species self-organise into a "Coulomb Crystal" ^[Shhh, it's not really a crystal, it's a strongly-coupled plasma]
-:::
+## Why {.smaller}
 
-## Reactions in progress
+- Fundamental Chemistry: studying exactly how two species react
+- Need a few, very cold atoms confined in a small space
+  - At higher temperature, too many complications
+    - Kinetic energy of reactants
+    - Many combinations of internal energy states
+    - Quantum effects displayed on much shorter scales
+  - Confinement puts them close enough to interact
+- Testable prediction: Theory since 1905 predicts reaction rate should have no temperature dependence
+
+# How
 :::: {.columns}
-::: {.column width="35%"}
-Ca<sup>+</sup> reacting with CH<sub>3</sub>F, showing how the numbers of each species change with time
+
+::: {.column width="60%"}
+Two requirements to this:
+
+- Confinement
+- Cooling
+
+Then ionised species self-organise into a "Coulomb Crystal" ^[Shhh, it's not really a crystal, it's a strongly-coupled plasma]
 :::
-::: {.column width="65%"}
-![](TimeProgression.png){width=700}
+::: {.column width="40%"}
+![Pure Ca<sup>+</sup> Crystal (n=595)](18_12_20_339_modA_cropped.png){fig-alt="595 ion crystal" height=360}
 :::
 ::::
+
+## Confinement {auto-animate=true}
+:::: {.columns}
+
+::: {.column width="50%"}
+
+- Fire neutral atoms into a electric field
+- Shine a laser at the atoms to ionise them
+- Problem is static fields don't work
+:::
+
+::: {.column width="50%"}
+
+![](StructuralOverview.png){fig-alt="Paul Trap"}
+
+:::
+::::
+
+## Confinement {auto-animate=true}
+:::: {.columns}
+
+::: {.column width="50%"}
+
+- Fire neutral atoms into a electric field
+- Shine a laser at the atoms to ionise them
+
+- Problem is you can't do this with static fields
+:::
+
+::: {.column width="50%"}
+
+![But you can if you create a rotating electric potential - Nobel Prize \(89\)](Electrodes.png){fig-alt="Electrodes"}
+
+:::
+::::
+
+## Laser Cooling {auto-animate=true, .smaller}
+:::: {.columns}
+
+::: {.column width="50%"}
+
+- Laser tuned to atom's absorption band hits atom
+- Atom excited and recoils away from laser
+- Light then re-emitted in a random direction
+:::
+::: {.column width="50%"}
+![Absorption and Emission](AbsorbtionAndEmission.png){fig-alt="Absorption and Emission"}
+:::
+::::
+
+## Laser Cooling {auto-animate=true, .smaller}
+:::: {.columns}
+
+::: {.column width="50%"}
+- Tune the laser to a longer wavelength - lower energy
+- Only the atoms moving fastest towards the laser can absorb.
+- Energy lost from the system from the hottest atoms
+- System as whole then cools down
+
+:::
+::: {.column width="50%"}
+![Absorption and Emission](AbsorbtionAndEmission.png){fig-alt="Absorption and Emission"}
+:::
+::::
+
+## But this only works for one species
+
+- Sympathetic cooling
+  - Use Ca<sup>+</sup> to cool species that you aren't able to laser cool by collisions.
+
+
+## Reactions in progress {.smaller}
+:::: {.columns}
+::: {.column width="50%"}
+
+ Ca<sup>+</sup> (trapped) + CH<sub>3</sub>F &#8594;  CaF<sup>+</sup> +  CH<sub>3</sub>
+
+- CH<sub>3</sub> is uncharged and leaves the trap.
+- CaF<sup>+</sup> doesn't fluoresce at this wavelength
+- Fewer Ca<sup>+</sup> ions as time progresses, allows measurement of reaction rate
+- Lighter Ca<sup>+</sup> ions sink to the centre of the crystal changing its observed shape
+:::
+::: {.column width="50%"}
+![](TimeProgression.png){width=650}
+:::
+::::
+
 ## Great - Where do we come in
 :::: {.columns}
 
@@ -49,81 +147,69 @@ Resource intensive so.....  Machine Learning!
 
 :::
 ::::
-# How
-
-Two parts to this, confinement and cooling
-
-
-## Confinement {auto-animate=true}
-:::: {.columns}
-
-::: {.column width="40%"}
-
-- Fire neutral atoms into a electric field
-- Shine a laser at the atoms to ionise them
-
-- Problem is you can't do this with static fields
-:::
-
-::: {.column width="60%"}
-
-![](StructuralOverview.png){fig-alt="Paul Trap"}
-
-:::
-::::
-
-## Confinement {auto-animate=true}
-:::: {.columns}
-
-::: {.column width="40%"}
-
-- Fire neutral atoms into a electric field
-- Shine a laser at the atoms to ionise them
-
-- Problem is you can't do this with static fields
-:::
-
-::: {.column width="60%"}
-
-![But you can if you create a rotating electric potential - Nobel Prize \(89\)](Electrodes.png){fig-alt="Electrodes"}
-
-:::
-::::
-
-## Laser Cooling 
-:::: {.columns}
-
-::: {.column width="60%"}
-- Use the Doppler Effect to blue-shift a laser's wavelength.
-  - Moves it from just below the absorbtion energy, to the absorbtion energy
-- But only for the hottest species moving towards the laser.
-- Fluorescence emitted in all directions.
-:::
-::: {.column width="40%"}
-![Ca<sup>+</sup> energy levels](EnergyLevels.png){fig-alt="Calcium energy levels"}
-:::
-::::
-
-## But this only works for one species
-
-- Sympathetic cooling
-  - Use Ca<sup>+</sup> to cool species that you aren't able to laser cool by colllisions.
 
 ## Plan of work {.smaller}
 
-Eventually infer the numbers of Ca, numbers of heavier species, and numbers of lighter species.
+Predict the numbers of Ca<sup>+</sup> ions initially, then infer the numbers of lighter or heavier species.
 
 Start with pure Ca<sup>+</sup> crystals.
 
 - Improve the simulation code
   - Currently takes 3 mins for ~50 ions, but scales as (N<sub>ions</sub>)<sup>2
-  - Image augmentation (still need to simulate ~40000 images)
-  - CUDA
-  
-- Try and use a GAN to make simulated images more realistic - difficult
-- Use PyTorch to try and learn the number of ions from the experimental images.
+  - Image augmentation (still need to simulate ~700000 images)
+- Run a Convolutional Neural Network on the simulated data set.
+- Try and use a GAN transform simulated images to be more like experimental images - small numbers of experimental images
+- Use PyTorch to try and learn the number of ions from the transformed images.
 
-## Non-deep learning 
+## Currently  {.smaller}
+
+Using BlueBear to simulate crystals
+
+- Using a Slurm array to run 4000 simulations
+- Running 500 jobs in parallel
+
+Hashing the filenames to produce a 6:1 training validation set
+
+- Can start training tapping off simulations as they complete without leakage
+
+Can't just load dataset into memory
+
+- Using WebDataSet in PyTorch to package these images into shards of 500 images with labels: tar files
+- Allows shuffling, pre-loading and caching of images
+
+## Deep Learning
+
+::: {layout-ncol=2}
+![](Schematic-diagram-of-the-proposed-edge-detectors-using-simple-CNN-setting.jpg){fig-alt="CNN" width=450}
+
+![](DeepLearning.png){fig-alt="CNNinFull" width=540}
+:::
+
+
+## Using a GAN to make simulated images more realistic {auto-animate=true}
+
+![Training a network to replace Zebras with Horses](Zebra.webp){fig-alt="Horses to Zebras" height=450}
+
+<!--
+## Using a GAN to make simulated images more realistic {auto-animate=true}
+
+Internet disappoints me
+![Being John Malkovich](BeingJohnMalkovich.png){fig-alt="Being John Malkovich" height=450}
+-->
+
+## Using a GAN to make simulated images more realistic {auto-animate=true}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![Simulated image (n=150)](simulated_image_150_200_2.7_0.255_213_cropped.png){fig-alt="Simulated 150 ions" height=400}
+:::
+::: {.column width="50%"}
+![Experimental image (n=150)](29_01_19_213_modA_cropped.png){fig-alt="Experiment image of 150 ions" height=400}
+:::
+::::
+<!--
+## Non-deep learning
 
 ![N\(Ca<sup>+</sup>\) against image brightness \(n=92, correlation=0.75\)](Experimental.png){fig-alt="Experimental result" height=450}
 
@@ -135,3 +221,4 @@ Start with pure Ca<sup>+</sup> crystals.
   - Defense against replay attacks - kerberos
   - Navigation - GPS speed of light 1ft per nanosecond.
 
+-->
