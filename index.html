@@ -7,7 +7,7 @@
 <link href="CoulombCrystals_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="CoulombCrystals_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="CoulombCrystals_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.2.475">
+  <meta name="generator" content="quarto-1.2.280">
 
   <meta name="author" content="James Allsopp and Tim Softley">
   <title>Coulomb Crystals: Chemistry at very low temperatures</title>
@@ -562,21 +562,19 @@ Start with pure Ca<sup>+</sup> crystals.
 - Use PyTorch to try and learn the number of ions from the transformed images.
 -->
 </section>
-<section id="currently" class="slide level2 smaller">
-<h2>Currently</h2>
-<p>Using BlueBear to simulate crystals</p>
+<section id="preparing-data" class="slide level2 smaller">
+<h2>Preparing data</h2>
 <ul>
-<li>Using a Slurm array to run 4000 simulations</li>
+<li><p>Using BlueBear to simulate crystals</p>
+<ul>
+<li>Using a Slurm array to run 4000 simulations at a time</li>
 <li>Running 500 jobs in parallel</li>
-</ul>
-<p>Hashing the filenames to produce a 6:1 training validation set</p>
-<ul>
-<li>Can start training tapping off simulations as they complete without leakage</li>
-</ul>
-<p>Can’t just load dataset into memory</p>
-<ul>
-<li>Using WebDataSet in PyTorch to package these images into shards of 500 images with labels: tar files</li>
-<li>Allows shuffling, pre-loading and caching of images</li>
+<li>Aim for 700,000 in total</li>
+</ul></li>
+<li><p>Hashing the filenames to produce a 6:1 training validation set</p></li>
+<li><p>Can start training tapping off simulations as they complete without leakage +Can’t just load dataset into memory</p></li>
+<li><p>Using WebDataSet in PyTorch to package these images into shards of 500 images with labels: tar files</p></li>
+<li><p>Allows shuffling, pre-loading and caching of images</p></li>
 </ul>
 </section>
 <section id="machine-learning" class="slide level2">
